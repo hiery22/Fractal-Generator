@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fractal Generater</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="pages">
+    <button class="link">Create your own shape!</button>
+    <button class="link">What is fractal?</button>
+    <button class="link">Share your shape!</button>
+    <button class="link">See other's shapes</button>
+  </div>
+
+  <div id="p1" class="page">
+    <div id="shape_maker">
+      <div class="inline border">
+        <div class="border inline">
+          <canvas id="shape_canvas" class="outline wh"></canvas>
+          <button id="del_last">del</button>
+          <button id="use_sample_shape">use</button>
+          <button id="clear_sample_shape">clear</button>
+        </div>
+        <div class="inline" id="operaters">
+          <input id="first_point_x" placeholder="first point.x" class="outline">
+          <input id="first_point_y" placeholder="first point.y" class="outline">
+          <input id="second_point_x" placeholder="second point.x" class="outline">
+          <input id="second_point_y" placeholder="second point.y" class="outline">
+          <button id="add_line">add line</button>
+        </div>
+        <div class="inline" id="operaters2">
+          <input id="center_x" placeholder="point.x" class="outline">
+          <input id="center_y" placeholder="point.y" class="outline">
+          <input id="circle_radius" placeholder="radius" class="outline">
+          <button id="add_circle">add circle</button>
+        </div>
+      </div>
+
+      <div id="editor_container" class="inline border">
+        <div class="border inline">
+          <canvas id="using_shape" class="wh outline"></canvas>
+          <button id="clear_using_shape">clear</button>
+        </div>
+        <div class="inline border">
+          <input id="input_x" placeholder="x axis of the shape(0 = orgin)" class="outline">
+          <input id="input_y" placeholder="y axis of the shape(0 = orgin)" class="outline">
+          <input id="input_direction" placeholder="dir of the shape(clock, 0 = orgin)" class="outline">
+          <input id="input_scale" placeholder="scale of the shape(1 = origin)" class="outline">
+
+          <button id="apply_properties" class="outline">apply</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="resulting_shape_container">
+      <div class="border inline">
+        <canvas id='board' class="wh outline"></canvas>
+        <button id="board_add">add</button>
+        <button id="board_del">del</button>
+        <button id="board_clear">clear</button>
+      </div>
+      <div class="border inline">
+        <canvas id="resulting_shape" class="wh outline"></canvas>
+        <button id="generate_result">Generate</button>
+        <button id="go_back_result">Go back</button>
+        <button id="share_result">share your shape</button>
+      </div>
+    </div>
+
+    <div id="shape_container" class="shape_containers">
+      <div class="original_shape inline border">
+        <canvas class="shape_canvas outline wh"></canvas>
+        <button class="change_shape">change</button>
+        <button class="use_shape_n">use</button>
+      </div>
+      <div class="afterchange_shape inline border">
+        <canvas class="changed_canvas outline wh"></canvas>
+        <button class="add_shape">add</button>
+        <button class="del_shape">del</button>
+        <button class="clean_shape">clear</button>
+      </div>
+    </div>
+
+    <div id="shape_container_containers">
+      <div>
+      </div>
+
+      <div id="button_container">
+        <button id="add_shape_container">Add a new shape container</button>
+        <button id="del_shape_container">Del the last shape container</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="p2" class="page">
+    <h1>
+      Understanding Fractals: A Guide to Infinite Complexity
+      A fractal is a geometric shape that exhibits self-similarity, meaning it looks similar at different levels of
+      magnification. No matter how much you zoom in or out, a fractal retains its intricate patterns. This unique
+      property makes fractals a fascinating subject in mathematics, science, and art.
+      <br><br>
+      Fractals are often created by applying a simple rule repeatedly, a process known as iteration. Despite their
+      simplicity, fractals can generate highly complex and detailed structures. Many natural phenomena, such as clouds,
+      mountain ranges, coastlines, and even the structure of blood vessels, exhibit fractal-like patterns.
+      <br><br>
+      Famous Examples of Fractals
+      The Mandelbrot Set – One of the most well-known fractals, the Mandelbrot Set is generated using a mathematical
+      formula that produces an infinitely detailed and complex shape.
+      The Koch Snowflake – Constructed by repeatedly adding smaller triangles to each side of an equilateral triangle,
+      this fractal demonstrates how a finite area can enclose an infinite perimeter.
+      The Sierpinski Triangle – Formed by recursively removing smaller triangles from a larger one, this fractal
+      highlights the concept of infinite repetition in a simple yet striking pattern.
+      Applications of Fractals
+      Fractals have numerous real-world applications across various fields, including:
+      <br><br>
+      Computer Graphics – Fractal algorithms are used to generate realistic textures and landscapes in movies, video
+      games, and simulations.
+      Nature and Environmental Studies – Fractal patterns help scientists analyze ecosystems, weather patterns, and
+      geological formations.
+      Medical Science – The branching structures of blood vessels, lungs, and neurons follow fractal patterns, aiding
+      research in medical imaging and diagnostics.
+      Engineering and Technology – Fractal-based designs improve the efficiency of antennas, signal processing, and even
+      circuit design.
+      Creating Your Own Fractals
+      Fractals can be generated through mathematical formulas, drawn manually, or created using computer algorithms.
+      With the right tools, anyone can explore the beauty of fractals by designing unique, intricate patterns.
+      <br><br>
+      By understanding fractals, we gain insight into the underlying patterns of the natural world, bridging the gap
+      between mathematics, science, and art. Would you like to explore fractal creation further? Try designing your own
+      and discover the endless possibilities!
+    </h1>
+  </div>
+
+  <div id="p3" class="page">
+    <input placeholder="Enter a name you will be seen as:" id="type_name">
+    <input placeholder="Enter title of your shape: " id="type_title">
+    <input placeholder="Enter a discription of your shape: " id="type_disc">
+    <button id="submit_fractal">submit</button>
+    <div id="pop_up">
+      <h1>Your fractal shape had been uploaded!</h1>
+    </div>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+
+</html>
