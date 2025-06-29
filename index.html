@@ -5,15 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Fractal Generater</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="fractal.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <div id="pages">
     <button class="link">Create your own shape!</button>
     <button class="link">What is fractal?</button>
-    <button class="link">Share your shape!</button>
-    <button class="link">See other's shapes</button>
   </div>
 
   <div id="p1" class="page">
@@ -56,20 +54,6 @@
       </div>
     </div>
 
-    <div id="resulting_shape_container">
-      <div class="border inline">
-        <canvas id='board' class="wh outline"></canvas>
-        <button id="board_add">add</button>
-        <button id="board_del">del</button>
-        <button id="board_clear">clear</button>
-      </div>
-      <div class="border inline">
-        <canvas id="resulting_shape" class="wh outline"></canvas>
-        <button id="generate_result">Generate</button>
-        <button id="go_back_result">Go back</button>
-        <button id="share_result">share your shape</button>
-      </div>
-    </div>
 
     <div id="shape_container" class="shape_containers">
       <div class="original_shape inline border">
@@ -92,6 +76,20 @@
       <div id="button_container">
         <button id="add_shape_container">Add a new shape container</button>
         <button id="del_shape_container">Del the last shape container</button>
+      </div>
+    </div>
+
+    <div id="resulting_shape_container">
+      <div class="border inline">
+        <canvas id='board' class="wh outline"></canvas>
+        <button id="board_add">add</button>
+        <button id="board_del">del</button>
+        <button id="board_clear">clear</button>
+      </div>
+      <div class="border inline">
+        <canvas id="resulting_shape" class="outline"></canvas>
+        <button id="generate_result">Generate</button>
+        <button id="go_back_result">Go back</button>
       </div>
     </div>
   </div>
@@ -145,8 +143,9 @@
     </div>
   </div>
 
-  <script src="script.js">
-  </script>
+
 </body>
+  <script src="former.js">
+  </script>
 
 </html>
